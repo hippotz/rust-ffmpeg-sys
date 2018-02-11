@@ -905,6 +905,7 @@ fn main() {
     // to bindgen, and lets you build up options for
     // the resulting bindings.
     let mut builder = bindgen::Builder::default()
+        .rustfmt_bindings(false)
         .clang_args(clang_includes)
         .ctypes_prefix("libc")
         // https://github.com/servo/rust-bindgen/issues/687
